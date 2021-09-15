@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Каталог</title>
+  {% for listing in listings %}
+        <div class="container px-4 px-lg-5">
+                <!-- Featured Project Row-->
+                    <div class="col-xl-10 col-lg-10"><a href="{% url 'listing' listing.id  %}"><img class="img-fluid mb-3 mb-lg-0" src="{{listing.image_url}}" alt="..." /></a></div>
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="featured-text text-center text-lg-left">
+                            <h4>{{listing.title}}</h4>
+                            <h1>Price: {{listing.price}} PLN</h1>
+                            <p class="text-black-50 mb-0">{{listing.city}}</p>
+
+
+
+                        </div>
+                    </div>
+        </div>
+
+
+        {% endfor %}
+</head>
+<body>
+
+</body>
+</html>
